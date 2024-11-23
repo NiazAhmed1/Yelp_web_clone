@@ -1,0 +1,478 @@
+<!-- NIAZ AHMED - 301203 -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up with Yelp</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-color: white;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            border-bottom: 1px solid rgba(124, 124, 124, 0.367);
+        }
+
+        .logoImage {
+            grid-column: 1;
+            grid-row: 1;
+            margin-right: 10px;
+            width: 80px;
+            height: auto;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        .Login {
+            margin-left: 250px;
+        }
+
+        h1 {
+            color: red;
+            margin-left: 100px;
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        h5 {
+            color: black;
+            margin-left: 100px;
+            font-size: 15px;
+            font-weight: 550;
+            margin-bottom: 15px;
+        }
+
+        .text {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+
+        }
+
+        .btn-container {
+            display: grid;
+            margin-right: 20px;
+            width: 200px;
+        }
+
+        .Facebook_btn {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 2px;
+            width: 340px;
+            margin-top: 20px;
+        }
+
+        .google-btn {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            padding: 10px;
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 2px;
+            width: 340px;
+        }
+
+        .black-btn {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 10px;
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 2px;
+            width: 340px;
+        }
+
+
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            width: 340px;
+            margin-top: 10px;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: "";
+            flex-grow: 1;
+            border-bottom: 1px solid #000;
+        }
+
+        .separator-text {
+            margin: 0 10px;
+            color: #000;
+            font-weight: bold;
+        }
+
+
+        .form-container {
+
+            display: grid;
+            margin-top: 20px;
+            width: 100%;
+
+        }
+
+        .form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form input:focus {
+            outline: none;
+            border-color: blue;
+            box-shadow: 0 0 3px blue;
+        }
+
+        .form button {
+            background-color: blue;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .forget-password {
+            font-size: 12px;
+            margin-left: 20.7%;
+            margin-bottom: 10px;
+
+        }
+
+        .new-yelp {
+            font-size: 10px;
+            margin-left: 18%;
+            color: rgb(118, 115, 115);
+            margin-top: 5px;
+        }
+
+
+        .logo {
+            display: inline;
+            position: absolute;
+            left: 65%;
+            height: 40%;
+            width: 40%;
+            top: 25%;
+            transform: translate(-50%, -50%);
+            margin-right: 500px;
+            margin-top: 150px;
+        }
+
+        .new_div_2 {
+            display: block;
+        }
+
+        h1 {
+            margin-top: 100px;
+        }
+
+
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+
+        .btnSignup {
+            padding: 10px;
+            color: white;
+            font-family: sans-serif;
+            border: 0;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: block;
+            align-items: center;
+            margin-left: 0px;
+            width: 340px;
+        }
+
+
+
+        select {
+            width: 117px;
+            border-radius: 2px;
+            height: 30px;
+            padding: 5px;
+        }
+
+
+
+
+        /*footer css*/
+        .footer {
+            background-color: #f1f1f1;
+            padding: 30px 100px;
+            text-align: center;
+            border-top: 1px solid lightgray;
+            position: relative;
+            margin-top: 100px;
+        }
+
+        .footer-section {
+            width: 25%;
+            float: left;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h3 {
+            margin: 0 0 10px;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .footer-section ul li {
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: rgb(53, 51, 51);
+            font-size: 12px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: rgb(53, 51, 51);
+        }
+
+
+        .CopyRight p {
+            float: left;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: left;
+
+        }
+
+        .inline-image {
+            width: auto;
+            height: 20px;
+        }
+
+        .footer::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="images/logo.png" alt="Logo" class="logoImage">
+    </header>
+    <div class="logo">
+        <img src="images/signup.PNG" alt="Your Logo" />
+    </div>
+    <div class="Login">
+        <h1>Login to Yelp</h1>
+        <h5>New to Yelp? <a href="SignUp_Screen.html">Sign up</a></h5>
+
+        <p class="text">
+            By continuing, you agree to Yelp's
+            <a href="#">Terms of Service</a>
+            and <br> acknowledge Yelp's
+            <a href="#">Privacy Policy</a>
+        </p>
+
+
+        <div class="btn-container">
+            <div class="Facebook_btn">Continue with Facebook</div>
+            <div class="google-btn">Continue with Google</div>
+            <div class="black-btn">Continue with Apple</div>
+        </div>
+
+        <div class="separator">
+            <span class="separator-text">OR</span>
+        </div>
+
+
+        <div class="form-container">
+            <div class="new_div">
+                <input style="width: 343px" class="new_div_2" placeholder="Email" type="email" id="email" name="email"
+                    required />
+                <input style="width: 343px" class="new_div_2" placeholder="Password" type="password" id="password"
+                    name="password" required />
+            </div>
+            <div class="forget-password">
+                <a href="#">Forget Password ?</a>
+            </div>
+
+            <button class="new_div_2 btnSignup" type="submit" style="background-color: red" onclick="validateForm()">
+                Login In
+            </button>
+
+            <div class="new-yelp">
+                <p>New to Yelp?
+                    <a href="SignUp_Screen.html">Sign up</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer section -->
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>About</h3>
+            <ul>
+                <li><a href="#">About Yelp</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Trusts & Safety</a></li>
+                <li><a href="#">Content Guidelines</a></li>
+                <li><a href="#">Accessibility Statement</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Ad Choices</a></li>
+                <li><a href="#">Your Privacy Choices</a></li>
+
+
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Discover</h3>
+            <ul>
+                <li><a href="#">Yelp Project Cost Guides</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Talk</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Yelp Blog</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Yelp Mobile</a></li>
+                <li><a href="#">Developers</a></li>
+                <li><a href="#">RSS</a></li>
+
+
+
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Yelp for Business</h3>
+            <ul>
+                <li><a href="#">Yelp for Business</a></li>
+                <li><a href="#">Business Owner Login</a></li>
+                <li><a href="#">Claim your Business page</a></li>
+                <li><a href="#">Advertise on Yelp</a></li>
+                <li><a href="#">Yelp for Resturant Owners</a></li>
+                <li><a href="#">Table Management</a></li>
+                <li><a href="#">Business Sucess Stories</a></li>
+                <li><a href="#">Business Support</a></li>
+                <li><a href="#">Yelp Blog for Business</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Language</h3>
+            <ul>
+                <li><a href="#">English v</a></li>
+            </ul>
+        </div>
+        <div class="CopyRight">
+
+            <p>
+                Copyright © 2004–2023 Yelp Inc. Yelp, <img src="logo.png" alt="Image Description" class="inline-image">
+                and related marks are registered trademarks of Yelp.
+
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function validateForm() {
+            if (document.querySelector(".website-email"))
+                document.querySelector(".website-email").remove();
+            var emailInput = document.getElementById("email");
+            var emailValue = emailInput.value.trim();
+
+
+            if (!emailValue.endsWith("@gmail.com")) {
+                emailInput.style.borderColor = "black";
+                var warningMessage = document.createElement("div");
+                warningMessage.textContent = `Please include @ in the email address. ${emailValue} is missing an '@'`;
+                warningMessage.style.color = "black";
+                warningMessage.className = "website-email"
+                warningMessage.style.backgroundColor = "white";
+                warningMessage.style.borderRadius = "10px";
+                warningMessage.style.border = "1px solid black";
+                warningMessage.style.padding = "5px";
+                warningMessage.style.position = "absolute";
+                warningMessage.style.zIndex = "9999";
+                document.getElementById("email").style.border = "3px solid red";
+
+                // Adding shadow effect
+                warningMessage.style.boxShadow =
+                    "0px 0px 10px 2px rgba(0, 0, 0, 0.1)";
+
+                warningMessage.style.position = "absolute";
+                warningMessage.style.bottom = "0";
+                warningMessage.style.left = "0";
+
+                emailInput.parentNode.style.position = "relative";
+                emailInput.parentNode.appendChild(warningMessage);
+            } else {
+                emailInput.style.borderColor = "";
+                var warningMessage = emailInput.parentNode.querySelector("span");
+                if (warningMessage) {
+                    warningMessage.parentNode.removeChild(warningMessage);
+                }
+                // Proceed with form submission or other actions
+            }
+        }
+
+    </script>
+</body>
+
+</html>

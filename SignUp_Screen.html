@@ -1,0 +1,512 @@
+<!-- NIAZ AHMED - 301203 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up with Yelp</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-color: white;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            border-bottom: 1px solid rgba(124, 124, 124, 0.367);
+        }
+
+        .logoImage {
+            grid-column: 1;
+            grid-row: 1;
+            margin-right: 10px;
+            width: 80px;
+            height: auto;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        .Login {
+            margin-left: 250px;
+        }
+
+        h1 {
+            color: red;
+            margin-left: 90px;
+            font-size: 25px;
+            margin-bottom: 5px;
+            margin-top: 60px;
+        }
+
+        h5 {
+            color: black;
+            margin-left: 50px;
+            font-size: 15px;
+            font-weight: 550;
+            margin-bottom: 15px;
+        }
+
+        .text {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+
+        }
+
+        .btn-container {
+            display: grid;
+            margin-right: 20px;
+            width: 200px;
+        }
+
+        .Facebook_btn {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 2px;
+            width: 340px;
+            margin-top: 20px;
+        }
+
+        .google-btn {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            padding: 10px;
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 2px;
+            width: 340px;
+        }
+
+        .black-btn {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 10px;
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 2px;
+            width: 340px;
+        }
+
+
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            width: 340px;
+            margin-top: 10px;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: "";
+            flex-grow: 1;
+            border-bottom: 1px solid #000;
+        }
+
+        .separator-text {
+            margin: 0 10px;
+            color: #000;
+            font-weight: bold;
+        }
+
+
+        .form-container {
+            margin-top: 20px;
+            float: left;
+            width: 100%;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .pass-strength {
+            height: 10px;
+            margin-top: 15px;
+            background-color: lightgray;
+            width: 343px;
+
+        }
+
+        .pass-strength-bar {
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .pass-strength-text {
+            margin-top: 3px;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            display: inline;
+            position: absolute;
+            left: 65%;
+            height: 40%;
+            width: 40%;
+            top: 25%;
+            transform: translate(-50%, -50%);
+            margin-right: 500px;
+            margin-top: 150px;
+        }
+
+        .new_div_2 {
+            display: block;
+            width: 350px;
+        }
+
+
+
+        .btnSignup {
+            padding: 10px;
+            color: white;
+            font-family: sans-serif;
+            border: 0;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: block;
+            align-items: center;
+            margin-left: 0px;
+            width: 360px;
+        }
+
+        input {
+            padding: 5px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .btn2 {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            margin-bottom: 50px;
+        }
+
+        .new-yelp {
+            font-size: 10px;
+            margin-left: 18%;
+            color: rgb(118, 115, 115);
+            margin-top: 5px;
+        }
+
+
+        select {
+            width: 117px;
+            border-radius: 2px;
+            height: 30px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="images/logo.png" alt="Logo" class="logoImage">
+    </header>
+
+    <div class="main">
+
+
+
+        <div class="logo">
+            <img src="images/signup.PNG" alt="Your Logo" />
+        </div>
+
+
+        <div class="Login">
+            <h1>Sign Up for Yelp</h1>
+            <h5>Connect with the great local business</h5>
+
+            <p class="text">
+                By continuing, you agree to Yelp's
+                <a href="#">Terms of Service</a>
+                and <br> acknowledge Yelp's
+                <a href="#">Privacy Policy</a>
+            </p>
+
+
+            <div class="btn-container">
+                <div class="Facebook_btn">Continue with Facebook</div>
+                <div class="google-btn">Continue with Google</div>
+                <div class="black-btn">Continue with Apple</div>
+            </div>
+
+            <div class="separator">
+                <span class="separator-text">OR</span>
+            </div>
+
+
+            <div class="form-container">
+                <div class="new_div">
+                    <input style="width:170px" placeholder="First Name" type="text" id="first-name" name="first-name"
+                        required>
+                    <input placeholder="Last Name" type="text" id="last-name" name="last-name" required>
+                </div>
+                <input class="new_div_2" placeholder="Email" type="email" id="email" name="email" required>
+
+                <input class="new_div_2" placeholder="Password" type="password" id="password" name="password" required>
+                <div class="pass-strength">
+                    <div class="pass-strength-bar" id="pass-strength-bar"></div>
+                </div>
+                <div class="pass-strength-text" id="pass-strength-text"></div>
+                <input class="new_div_2" placeholder="Confirm Password" type="password" id="confirm-password"
+                    name="confirm-password" required>
+                <div class="error-message" id="password-error">Passwords do not match.</div>
+                <input class="new_div_2" placeholder="ZIP Code" type="text" id="zip" name="zip" required>
+
+
+                <h4>Birthday</h4>
+                <select id="month" name="month">
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                </select>
+                <select id="day" name="day">
+                    <option value="Day1">01</option>
+                    <option value="Day2">02</option>
+                    <option value="Day3">03</option>
+                    <option value="Day4">04</option>
+                    <option value="Day5">05</option>
+                    <option value="Day6">06</option>
+                    <option value="Day7">07</option>
+                    <option value="Day8">08</option>
+                    <option value="Day9">09</option>
+                    <option value="Day10">10</option>
+                    <option value="Day11">11</option>
+                    <option value="Day12">12</option>
+                    <option value="Day13">13</option>
+                    <option value="Day14">14</option>
+                    <option value="Day15">15</option>
+                    <option value="Day16">16</option>
+                    <option value="Day17">17</option>
+                    <option value="Day18">18</option>
+                    <option value="Day19">19</option>
+                    <option value="Day20">20</option>
+                    <option value="Day21">21</option>
+                    <option value="Day22">22</option>
+                    <option value="Day23">23</option>
+                    <option value="Day24">24</option>
+                    <option value="Day25">25</option>
+                    <option value="Day26">26</option>
+                    <option value="Day27">27</option>
+                    <option value="Day28">28</option>
+                    <option value="Day29">29</option>
+                    <option value="Day30">30</option>
+                    <option value="Day31">31</option>
+                </select>
+                <select id="year" name="year">
+                    <option value="Year2000">2000</option>
+                    <option value="Year2001">2001</option>
+                    <option value="Year2002">2002</option>
+                    <option value="Year2003">2003</option>
+                    <option value="Year2004">2004</option>
+                    <option value="Year2005">2005</option>
+                    <option value="Year2006">2006</option>
+                    <option value="Year2007">2007</option>
+                    <option value="Year2008">2008</option>
+                    <option value="Year2009">2009</option>
+                    <option value="Year2010">2010</option>
+                    <option value="Year2011">2011</option>
+                    <option value="Year2012">2012</option>
+                    <option value="Year2013">2013</option>
+                    <option value="Year2014">2014</option>
+                    <option value="Year2015">2015</option>
+                    <option value="Year2016">2016</option>
+                    <option value="Year2017">2017</option>
+                    <option value="Year2018">2018</option>
+                    <option value="Year2019">2019</option>
+                    <option value="Year2020">2020</option>
+                    <option value="Year2021">2021</option>
+                    <option value="Year2022">2022</option>
+                    <option value="Year2023">2023</option>
+                </select>
+                <button class="new_div_2 btnSignup" type="submit" style="background-color: red" onclick="validateForm()"
+                    disabled>Sign Up</button>
+
+                <div class="new-yelp">
+                    <p>Already on Yelp?
+                        <a href="Login_Screen.html">Log in</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        // Get the password and confirm password elements
+        const passwordInput = document.getElementById("password");
+        const confirmPasswordInput = document.getElementById("confirm-password");
+
+        // Get the password strength bar element
+        const passwordStrengthBar = document.getElementById(
+            "pass-strength-bar"
+        );
+
+        // Get the password error message element
+        const passwordError = document.getElementById("password-error");
+
+        // Get the sign-up button
+        const signUpButton = document.querySelector(".btnSignup");
+
+        // Get the password strength text element
+        const passwordStrengthText = document.getElementById(
+            "pass-strength-text"
+        );
+
+        // Add event listeners for input change
+        passwordInput.addEventListener("input", validatePassword);
+        confirmPasswordInput.addEventListener("input", validatePassword);
+        function validateForm() {
+            if (document.querySelector(".website-email"))
+                document.querySelector(".website-email").remove();
+            var emailInput = document.getElementById("email");
+            var emailValue = emailInput.value.trim();
+
+            if (!emailValue.endsWith("@gmail.com")) {
+                emailInput.style.borderColor = "black";
+                var warningMessage = document.createElement("div");
+                warningMessage.textContent = ` ${emailValue} is missing an '@gmail.com'`;
+                warningMessage.style.color = "black";
+                warningMessage.style.backgroundColor = "white";
+                warningMessage.style.borderRadius = "10px";
+                warningMessage.className = "website-email";
+                warningMessage.style.border = "1px solid black";
+                warningMessage.style.padding = "5px";
+                warningMessage.style.marginTop = "5px"; // Adding some space between the input and the warning message
+                warningMessage.style.position = "absolute";
+                document.getElementById("email").style.border = "3px solid red";
+                warningMessage.style.zIndex = "9999";
+                // Adding shadow effect
+                warningMessage.style.boxShadow =
+                    "0px 0px 10px 2px rgba(0, 0, 0, 0.1)";
+
+                // Check if the parent node has a child that comes after the emailInput
+                if (emailInput.nextSibling) {
+                    // If yes, insert the warning message before that child
+                    emailInput.parentNode.insertBefore(
+                        warningMessage,
+                        emailInput.nextSibling
+                    );
+                } else {
+                    // If no, simply append the warning message at the end
+                    emailInput.parentNode.appendChild(warningMessage);
+                }
+            } else {
+                emailInput.style.borderColor = "";
+                var warningMessage = emailInput.parentNode.querySelector("span");
+                if (warningMessage) {
+                    warningMessage.parentNode.removeChild(warningMessage);
+                }
+                // Proceed with form submission or other actions
+            }
+        }
+
+        document
+            .getElementById("btn-signup")
+            .addEventListener("click", function () {
+                validateForm();
+            });
+
+        function validatePassword() {
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+
+            // Reset error message and button state
+            passwordError.style.display = "none";
+            passwordInput.style.borderColor = "";
+            confirmPasswordInput.style.borderColor = "";
+
+            // Check if the passwords match
+            if (password !== confirmPassword) {
+                passwordError.style.display = "block";
+                passwordInput.style.borderColor = "red";
+                confirmPasswordInput.style.borderColor = "red";
+                signUpButton.disabled = true;
+                signUpButton.style.backgroundColor = "gray";
+                signUpButton.style.cursor = "not-allowed"; // Set cursor style to "not-allowed"
+            } else {
+                passwordError.style.display = "none";
+                passwordInput.style.borderColor = "";
+                confirmPasswordInput.style.borderColor = "";
+                signUpButton.disabled = false;
+                signUpButton.style.backgroundColor = "red";
+                signUpButton.style.cursor = "pointer"; // Set cursor style to "pointer"
+            }
+
+            // Calculate password strength and update color bar and text
+            const strength = calculatePasswordStrength(password);
+            updatePasswordStrengthBar(strength);
+        }
+
+        function calculatePasswordStrength(password) {
+            let strength = 0;
+            const criteria = {
+                capitalLetters: /[A-Z]/,
+                smallLetters: /[a-z]/,
+                specialCharacters: /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/,
+                numbers: /[0-9]/,
+            };
+
+            if (criteria.capitalLetters.test(password)) strength++;
+            if (criteria.smallLetters.test(password)) strength++;
+            if (criteria.specialCharacters.test(password)) strength++;
+            if (criteria.numbers.test(password)) strength++;
+
+            return strength;
+        }
+
+        function updatePasswordStrengthBar(strength) {
+            const bar = passwordStrengthBar;
+
+            // Calculate fill percentage based on password strength
+            const fillPercentage = strength * 25;
+
+            // Update color bar's width and color
+            bar.style.width = fillPercentage + "%";
+            if (strength === 4 || strength === 3) {
+                bar.style.backgroundColor = "green";
+                passwordStrengthText.textContent = "Password strength: strong";
+            } else {
+                bar.style.backgroundColor = "red";
+                passwordStrengthText.textContent = "Password strength: weak";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
